@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "StadiUmmO"
 include(":app")
- 
+include(":core-network")
+include(":core-utils")
+include(":core-design")
