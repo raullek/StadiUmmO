@@ -1,8 +1,10 @@
 package com.example.core_design.theme
 
+import androidx.compose.material3.ButtonColors
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.runtime.*
+import com.example.core_design.theme.view.StadiumoButtonColor
 
 @Stable
 class StadiumoColorScheme(
@@ -62,6 +64,8 @@ class StadiumoColorScheme(
 
     var isLight by mutableStateOf(isLight)
         internal set
+
+    internal var defaultButtonColorsCached: StadiumoButtonColor? = null
 
     fun copy(
         primary: Color = this.primary,

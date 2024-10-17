@@ -38,8 +38,9 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            SplashScreen()
-
+            StadiumoTheme {
+                SplashScreen()
+            }
         }
     }
 
