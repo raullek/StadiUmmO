@@ -61,8 +61,8 @@ object BtnDefaults {
     internal val StadiumoColorScheme.buttonColors: StadiumoButtonColor
         get() {
             return defaultButtonColorsCached ?: StadiumoButtonColor(
-                containerColor = Color.Blue,
-                contentColor = Color.Blue,
+                containerColor = Color(0xFF32B768),
+                contentColor = Color.White,
                 disabledContentColor = Color.Black,
                 disabledContainerColor = Color.Gray
             ).also { defaultButtonColorsCached = it }

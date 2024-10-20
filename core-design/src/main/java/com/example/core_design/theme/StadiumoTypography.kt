@@ -33,6 +33,15 @@ class StadiumoTypography {
             fontWeight = FontWeight.Bold,
             lineHeight = 30.sp,
         )
+
+    val s1:TextStyle
+        @Composable
+        get() = TextStyle(
+            fontFamily = FontFamily.Default,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Light,
+            lineHeight = 12.sp,
+        )
 }
 
 internal val LocalStadiumoTypography = staticCompositionLocalOf { StadiumoTypography() }
