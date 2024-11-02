@@ -1,12 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-  //  alias(libs.plugins.jetbrains.kotlin.ka)
-
 }
 
 android {
-    namespace = "com.example.authorization_impl"
+    namespace = "com.example.home_impl"
     compileSdk = 34
 
     defaultConfig {
@@ -49,10 +47,8 @@ android {
 }
 
 dependencies {
+    
     implementation(project(":core-design"))
-    implementation(project(":home-api"))
-    implementation(project(":home-impl"))
-    implementation(project(":core-utils"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -64,11 +60,15 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.core.splash)
 
-    //implementation(libs.androidx.compose)
+    implementation(libs.dagger)
+    implementation(libs.dagger.compiler)
+    implementation(libs.androidx.compose.navigation)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -76,7 +76,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    implementation(libs.dagger)
-    implementation(libs.dagger.compiler)
 }

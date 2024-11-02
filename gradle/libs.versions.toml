@@ -15,6 +15,7 @@ navigationFragmentKtx = "2.6.0"
 navigationUiKtx = "2.6.0"
 splash = "1.0.1"
 dagger = "2.52"
+navigation = "2.8.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,6 +27,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-navigation = {group = "androidx.navigation", name ="navigation-compose", version.ref = "navigation"}
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -39,7 +41,6 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-core-splash = {group= "androidx.core", name = "core-splashscreen", version.ref = "splash"}
 dagger = {group= "com.google.dagger", name = "dagger", version.ref = "dagger"}
 dagger-compiler = {group= "com.google.dagger", name = "dagger-compiler", version.ref = "dagger"}
-#androidx-accompanist = {group= "com.google.accompanist", name = "core-splashscreen", version.ref = "splash"}
 
 
 [plugins]

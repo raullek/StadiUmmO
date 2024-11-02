@@ -12,16 +12,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.authorization_impl.navigation.AuthorizationNavHost
 import com.example.core_design.theme.StadiumoTheme
 import com.example.stadiummo.ui.splash.OnboardingScreen
 
 class AuthorizationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       // enableEdgeToEdge()
+        // enableEdgeToEdge()
         setContent {
             StadiumoTheme {
-                OnboardingScreen()
+                val navController = rememberNavController()
+                AuthorizationNavHost(navController = navController)
+                //    OnboardingScreen()
             }
         }
     }

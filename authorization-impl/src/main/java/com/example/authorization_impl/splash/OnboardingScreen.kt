@@ -30,14 +30,16 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.authorization_impl.R
+import com.example.authorization_impl.navigation.Screen
 import com.example.core_design.theme.StadiumoTheme
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen(navHostController: NavHostController) {
 
     Column(
         modifier = Modifier,
@@ -102,6 +104,8 @@ fun OnboardingScreen() {
             if (pagerState.canScrollForward) {
                 val nextPage = (pagerState.currentPage + 1) % itemsList.size
                 coroutineScope.launch { pagerState.animateScrollToPage(nextPage) }
+            } else {
+                navHostController.navigate(Screen.AUTHORIZATION.name)
             }
         }
 

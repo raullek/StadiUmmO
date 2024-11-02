@@ -16,6 +16,8 @@
             <option value="$PROJECT_DIR$/core-network" />
             <option value="$PROJECT_DIR$/core-preferences" />
             <option value="$PROJECT_DIR$/core-utils" />
+            <option value="$PROJECT_DIR$/home-api" />
+            <option value="$PROJECT_DIR$/home-impl" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
