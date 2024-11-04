@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core-module-injector"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

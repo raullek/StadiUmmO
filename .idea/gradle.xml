@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/authorization-api" />
             <option value="$PROJECT_DIR$/authorization-impl" />
             <option value="$PROJECT_DIR$/core-design" />
+            <option value="$PROJECT_DIR$/core-module-injector" />
             <option value="$PROJECT_DIR$/core-network" />
             <option value="$PROJECT_DIR$/core-preferences" />
             <option value="$PROJECT_DIR$/core-utils" />

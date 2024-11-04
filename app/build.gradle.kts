@@ -55,6 +55,7 @@ android {
 
 dependencies {
     implementation(project(":core-design"))
+    implementation(project(":core-module-injector"))
     implementation(project(":authorization-api"))
     implementation(project(":authorization-impl"))
 
@@ -74,7 +75,7 @@ dependencies {
     implementation(libs.androidx.core.splash)
 
     implementation(libs.dagger)
-    implementation(libs.dagger.compiler)
+    kapt(libs.dagger.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

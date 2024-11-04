@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
   //  alias(libs.plugins.jetbrains.kotlin.ka)
 
 }
@@ -53,6 +54,8 @@ dependencies {
     implementation(project(":home-api"))
     implementation(project(":home-impl"))
     implementation(project(":core-utils"))
+    implementation(project(":authorization-api"))
+    implementation(project(":core-module-injector"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -78,5 +81,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.dagger)
-    implementation(libs.dagger.compiler)
+    kapt(libs.dagger.compiler)
 }
