@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "StadiUmmO"
+rootProject.name = "Stadiumo"
 include(":app")
 include(":core-network")
 include(":core-utils")
@@ -30,3 +30,5 @@ include(":core-preferences")
 include(":home-api")
 include(":home-impl")
 include(":core-module-injector")
+include(":stadium-detail-api")
+include(":stadium-detail-impl")

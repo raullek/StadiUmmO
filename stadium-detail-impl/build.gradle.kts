@@ -1,44 +1,26 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
-    namespace = "com.example.stadiummo"
+    namespace = "com.example.stadium_detail_impl"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.stadiummo"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-
-    buildFeatures {
-        compose = true
-        viewBinding = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -46,25 +28,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
-    implementation(project(":core-design"))
-    implementation(project(":core-preferences"))
-    implementation(project(":core-utils"))
-    implementation(project(":core-network"))
+
     implementation(project(":core-module-injector"))
-    implementation(project(":authorization-api"))
-    implementation(project(":authorization-impl"))
-    implementation(project(":home-api"))
-    implementation(project(":home-impl"))
+    implementation(project(":core-design"))
     implementation(project(":stadium-detail-api"))
-    implementation(project(":stadium-detail-impl"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -82,7 +52,8 @@ dependencies {
     implementation(libs.androidx.core.splash)
 
     implementation(libs.dagger)
-    kapt(libs.dagger.compiler)
+    implementation(libs.dagger.compiler)
+    implementation(libs.androidx.compose.navigation)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -91,4 +62,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 }

@@ -1,6 +1,5 @@
 package com.example.stadiummo.di
 
-import com.example.authorization_api.AuthorizationApi
 import com.example.core_module_injector.BaseAPI
 import com.example.core_module_injector.BaseDependencies
 import com.example.core_module_injector.ComponentHolder
