@@ -52,7 +52,6 @@ android {
 dependencies {
     implementation(project(":core-design"))
     implementation(project(":home-api"))
-    implementation(project(":home-impl"))
     implementation(project(":core-utils"))
     implementation(project(":authorization-api"))
     implementation(project(":core-module-injector"))

@@ -5,7 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(dependencies = [HomeDependencies::class])
+@Component(modules = [HomeModule::class], dependencies = [HomeDependencies::class])
 interface HomeComponent : HomeApi {
 
     companion object {

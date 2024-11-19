@@ -4,6 +4,8 @@ import com.example.authorization_api.AuthorizationApi
 import com.example.core_module_injector.BaseDependencies
 import com.example.core_module_injector.ComponentHolder
 import com.example.core_module_injector.ComponentHolderDelegate
+import com.example.home_api.HomeApi
+import com.example.home_api.HomeLauncher
 
 object AuthorizationComponentHolder : ComponentHolder<AuthorizationApi, AuthorizationDependencies> {
     private val componentHolderDelegate =
@@ -19,5 +21,5 @@ object AuthorizationComponentHolder : ComponentHolder<AuthorizationApi, Authoriz
 }
 
 interface AuthorizationDependencies : BaseDependencies {
-
+    val homeApi:HomeLauncher
 }

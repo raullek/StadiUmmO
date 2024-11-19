@@ -5,6 +5,9 @@ import com.example.authorization_impl.di.AuthorizationDependencies
 import com.example.core_module_injector.BaseDependencies
 import com.example.core_module_injector.BaseDependencyHolder
 import com.example.core_module_injector.DependencyHolder0
+import com.example.core_module_injector.DependencyHolder1
+import com.example.home_api.HomeApi
+import com.example.home_api.HomeLauncher
 import com.example.home_impl.di.HomeComponentHolder
 import com.example.home_impl.di.HomeDependencies
 import com.example.stadium_detail_impl.di.StadiumDetailComponentHolder
@@ -34,12 +37,16 @@ object ModulesDelegateInitializer {
          */
         AuthorizationComponentHolder.dependencyProvider = {
             class AuthorizationComponentHolder(
-                override val block: (BaseDependencyHolder<AuthorizationDependencies>) -> AuthorizationDependencies
-            ) : DependencyHolder0<AuthorizationDependencies>()
+                override val block: (BaseDependencyHolder<AuthorizationDependencies>, HomeApi) -> AuthorizationDependencies
+            ) : DependencyHolder1<HomeApi,AuthorizationDependencies>(
+                api1 =HomeComponentHolder.get()
+            )
 
-            AuthorizationComponentHolder { dependencyHolder ->
+            AuthorizationComponentHolder { dependencyHolder, homeApi->
                 object : AuthorizationDependencies {
-                    override val dependencyHolder: BaseDependencyHolder<out BaseDependencies> = dependencyHolder
+                    override val homeApi: HomeLauncher = homeApi.launcher
+                    override val dependencyHolder: BaseDependencyHolder<out BaseDependencies>
+                        get() = dependencyHolder
                 }
             }.dependencies
         }
