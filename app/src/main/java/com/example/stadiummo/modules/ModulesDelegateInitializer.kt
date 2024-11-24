@@ -1,5 +1,6 @@
-package com.example.stadiummo.di
+package com.example.stadiummo.modules
 
+import android.content.Context
 import com.example.authorization_impl.di.AuthorizationComponentHolder
 import com.example.authorization_impl.di.AuthorizationDependencies
 import com.example.core_module_injector.BaseDependencies
@@ -12,6 +13,9 @@ import com.example.home_impl.di.HomeComponentHolder
 import com.example.home_impl.di.HomeDependencies
 import com.example.stadium_detail_impl.di.StadiumDetailComponentHolder
 import com.example.stadium_detail_impl.di.StadiumDetailDependencies
+import com.example.stadiummo.StadiumoApp
+import com.example.stadiummo.di.ApplicationComponentHolder
+import com.example.stadiummo.di.ApplicationDependencies
 
 object ModulesDelegateInitializer {
 
@@ -27,6 +31,7 @@ object ModulesDelegateInitializer {
 
             ApplicationComponentHolder { dependencyHolder ->
                 object : ApplicationDependencies {
+                    override val context: Context = StadiumoApp.getContext()
                     override val dependencyHolder: BaseDependencyHolder<out BaseDependencies> = dependencyHolder
                 }
             }.dependencies

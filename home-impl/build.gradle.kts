@@ -48,9 +48,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":home-api"))
+
     implementation(project(":core-module-injector"))
     implementation(project(":core-design"))
-    implementation(project(":home-api"))
+    implementation(project(":core-deeplink"))
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

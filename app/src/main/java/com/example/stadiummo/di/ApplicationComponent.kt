@@ -1,11 +1,19 @@
 package com.example.stadiummo.di
 
+import com.example.core_deeplink.DeeplinkHandler
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(dependencies = [ApplicationDependencies::class])
+@Component(
+    modules = [
+        DeeplinkModule::class,
+        ApplicationModule::class],
+
+    dependencies = [ApplicationDependencies::class]
+)
 interface ApplicationComponent : ApplicationApi {
+    val deeplinkHandler: DeeplinkHandler
 
     companion object {
 

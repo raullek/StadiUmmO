@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/authorization-api" />
             <option value="$PROJECT_DIR$/authorization-impl" />
+            <option value="$PROJECT_DIR$/core-deeplink" />
             <option value="$PROJECT_DIR$/core-design" />
             <option value="$PROJECT_DIR$/core-module-injector" />
             <option value="$PROJECT_DIR$/core-network" />

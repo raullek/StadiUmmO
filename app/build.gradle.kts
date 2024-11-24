@@ -59,6 +59,8 @@ dependencies {
     implementation(project(":core-utils"))
     implementation(project(":core-network"))
     implementation(project(":core-module-injector"))
+    implementation(project(":core-deeplink"))
+
     implementation(project(":authorization-api"))
     implementation(project(":authorization-impl"))
     implementation(project(":home-api"))

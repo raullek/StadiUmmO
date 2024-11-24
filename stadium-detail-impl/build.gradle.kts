@@ -32,9 +32,11 @@ android {
 
 dependencies {
 
+    implementation(project(":stadium-detail-api"))
+
     implementation(project(":core-module-injector"))
     implementation(project(":core-design"))
-    implementation(project(":stadium-detail-api"))
+    implementation(project(":core-deeplink"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

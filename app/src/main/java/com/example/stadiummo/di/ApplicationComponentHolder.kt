@@ -1,5 +1,6 @@
 package com.example.stadiummo.di
 
+import android.content.Context
 import com.example.core_module_injector.BaseAPI
 import com.example.core_module_injector.BaseDependencies
 import com.example.core_module_injector.ComponentHolder
@@ -19,6 +20,7 @@ object ApplicationComponentHolder : ComponentHolder<ApplicationApi, ApplicationD
 }
 
 interface ApplicationDependencies : BaseDependencies {
+    val context: Context
 
 }
 

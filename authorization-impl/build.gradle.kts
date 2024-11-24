@@ -50,10 +50,12 @@ android {
 }
 
 dependencies {
-    implementation(project(":core-design"))
     implementation(project(":home-api"))
-    implementation(project(":core-utils"))
     implementation(project(":authorization-api"))
+
+    implementation(project(":core-design"))
+    implementation(project(":core-utils"))
+    implementation(project(":core-deeplink"))
     implementation(project(":core-module-injector"))
 
     implementation(libs.androidx.core.ktx)
